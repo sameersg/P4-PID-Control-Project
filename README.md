@@ -2,6 +2,14 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+##Reflection
+
+The PID coefficients were choosen by try an error. By trying different coefficients i saw changes in ossillation, steering and cte. By setting D to large negative caused sharp steerings, so i used a good middle value auf -3.0. The CTE value dropped down when i set P to -0.2 and D to -3.0. And it was working. 
+To optimizae it a litte more it tried different value for I and set it to 0.001. The cte got down a litte more.
+This was manuell approch to find the best hyperparameter. In future i will try to implement the twiddle algorithm.
+
+![Driving](steering.gif)
+![Values](values.png)
 
 ## Dependencies
 
@@ -93,4 +101,8 @@ still be compilable with cmake and make./
 
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+
+
+
+
 
