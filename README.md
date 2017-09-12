@@ -4,9 +4,11 @@ Self-Driving Car Engineer Nanodegree Program
 ---
 ##Reflection
 
-The PID coefficients were choosen by try an error. By trying different coefficients i saw changes in ossillation, steering and cte. By setting D to large negative caused sharp steerings, so i used a good middle value auf -3.0. The CTE value dropped down when i set P to -0.2 and D to -3.0. And it was working. 
+The PID coefficients were choosen by try an error. By trying different coefficients i saw changes in ossillation, steering and cte. By setting D to large negative caused sharp steerings, so i used a good middle value auf 3.0. The CTE value dropped down when i set P to 0.2 and D to 3.0. And it was working.
 To optimizae it a litte more it tried different value for I and set it to 0.001. The cte got down a litte more.
-This was manuell approch to find the best hyperparameter. In future i will try to implement the twiddle algorithm.
+After getting a response from the review 0.001 for KI was not working well setting it back to 0 worked.
+
+This was a manuell approch to find the best hyperparameter. In future i will try to implement the twiddle algorithm or MPC.
 
 ![Driving](steering.gif)
 ![Values](values.png)
@@ -27,7 +29,7 @@ This was manuell approch to find the best hyperparameter. In future i will try t
   * Run either `./install-mac.sh` or `./install-ubuntu.sh`.
   * If you install from source, checkout to commit `e94b6e1`, i.e.
     ```
-    git clone https://github.com/uWebSockets/uWebSockets 
+    git clone https://github.com/uWebSockets/uWebSockets
     cd uWebSockets
     git checkout e94b6e1
     ```
@@ -41,7 +43,7 @@ There's an experimental patch for windows in this [PR](https://github.com/udacit
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
+4. Run it: `./pid`.
 
 ## Editor Settings
 
@@ -101,8 +103,3 @@ still be compilable with cmake and make./
 
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
-
-
-
-
